@@ -191,3 +191,72 @@ a:hover {
     overflow: hidden;
     -webkit-font-smoothing: subpixel-antialiased;
 }
+
+.scroller {
+    padding: 10px 5% 10px 5%;
+}
+
+.js .content:before,
+.js .content:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 20px;
+    z-index: 100;
+    pointer-events: none;
+    background: -webkit-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);
+    background: -moz-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);
+    background: -o-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);
+    background: linear-gradient(top, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);
+}
+
+.js .content:after {
+    top: auto;
+    bottom: 0;
+    background: -webkit-linear-gradient(bottom, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);
+    background: -moz-linear-gradient(bottom, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);
+    background: -o-linear-gradient(bottom, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);
+    background: linear-gradient(bottom, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);
+}
+
+.content h2 {
+    font-weight: 300;
+    font-size: 4em;
+    padding: 0 0 10px;
+    color: #333;
+    margin: 0 1% 40px;
+    text-align: left;
+    box-shadow: 0 10px 0 rgba(0,0,0,0.02);
+    text-shadow: 0 0 2px #fff;
+}
+
+.no-js .content h2 {
+    padding: 40px 1% 20px;
+}
+
+.content p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    font-weight: 300;
+    padding: 5px 8%;
+    text-align: justify;
+}
+
+@media screen and (max-width:800px){
+    .no-js .menu-panel {
+        display: none;
+    }
+    
+    .no-js .container {
+        padding: 0;
+    }
+}
+
+@media screen and (max-width:400px){
+    .menu-panel,
+    .content {
+        font-size: 75%;
+    }
+}
