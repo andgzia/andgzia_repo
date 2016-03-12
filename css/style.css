@@ -177,4 +177,17 @@ a:hover {
     box-shadow: 0 -4px #fff, 0 4px #fff;
 }
 
-.no-js 
+.no-js .bb-custom-wrapper nav span,
+.no-js .menu-button {
+    display: none;
+}
+
+.js .content {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    bottom: 50px;
+    overflow: hidden;
+    -webkit-font-smoothing: subpixel-antialiased;
+}
